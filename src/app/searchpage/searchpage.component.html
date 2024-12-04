@@ -1,0 +1,57 @@
+<app-nav></app-nav>
+
+<section class="flex box-border w-full justify-center flex-wrap items-start content-start p-7">
+    <div class="mb-6">
+        <div class="flex ">
+      <h2 class="text-2xl font-bold text-gray-800">Search Result:</h2>
+    
+    
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-5 gap-2  overflow-y-auto">
+        <!-- Card 1 -->
+        <div *ngFor="let movie of movies"
+          class="mr-8 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 bg-white shadow rounded-s-xl ">
+    
+          <div class="relative w-72 rounded-s-xl">
+            <a [routerLink]="['/movies', movie.id]">
+              <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" [alt]="movie.title" class="w-screen-sm h-screen-sm">
+            </a>
+            <!-- <div class="absolute top-2 right-2 bg-gray-800 text-white rounded-full p-2 cursor-pointer">
+                <span class="material-icons">more_horiz</span>
+              </div> -->
+          </div>
+          <div class="p-4">
+            <!-- <div class="flex items-center space-x-2 mb-2">
+                <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-green-500 font-bold">
+                  84%
+                </div>
+              </div> -->
+            <h3 class="text-lg font-semibold"><a [routerLink]="['/movies', movie.id]" class="hover:text-blue-600">{{ movie.title}}{{movie.name}}</a></h3>
+            <p class="text-gray-600 text-sm">{{ movie.release_date }}{{movie.first_air_date}}</p>
+          </div>
+        </div>
+    </div>
+
+  
+
+
+
+  <div class="flex">
+    <!-- Previous Button -->
+    <button (click)="decrement()"  class="flex items-center justify-center px-4 h-10 me-3 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+      <svg class="w-3.5 h-3.5 me-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+      </svg>
+      Previous
+    </button>
+    <button (click)="increment()"   class="flex items-center justify-center px-4 h-10 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+      Next
+      <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+      </svg>
+    </button>
+  </div>
+  
+</section>

@@ -1,0 +1,63 @@
+<div class="container mx-auto px-4 py-8 ">
+  <!-- Header -->
+  <div class="mb-6">
+    <div class="flex justify-between items-center">
+      <h2 class="text-2xl font-bold text-gray-800">What's Popular</h2>
+
+      <!-- Tabs -->
+      <div class="inline-flex rounded-md shadow-sm bg-transparent" role="group">
+        <button type="button" (click)="fetchMovie()"
+          class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:focus:ring-blue-500 dark:focus:text-white">
+
+          Streaming
+        </button>
+        <button type="button" (click)="fetchTV()"
+          class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-gray-800 border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:text-white dark:hover:text-blue-700  dark:focus:ring-blue-500 dark:focus:text-white">
+
+          On TV
+        </button>
+        <button type="button"
+          class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-gray-800 border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:text-white dark:hover:text-blue-700  dark:focus:ring-blue-500 dark:focus:text-white">
+
+          For Rent
+        </button>
+        <button type="button"
+          class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-e-lg text-gray-900 bg-gray-800 border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:text-white dark:hover:text-blue-700  dark:focus:ring-blue-500 dark:focus:text-white">
+          In Theaters
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <!-- <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"> -->
+  <div class="flex flex-row overflow-x-auto">
+    <!-- Card 1 -->
+    <div *ngFor="let movie of movies"
+      class="mr-8 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 bg-white shadow rounded-s-xl ">
+
+      <div class="relative w-72 rounded-s-xl"  >
+        <a [routerLink]="['/movies', movie.id]" >
+          <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" [alt]="movie.title" class="w-screen-sm h-screen-sm">
+        </a>
+        <!-- <div class="absolute top-2 right-2 bg-gray-800 text-white rounded-full p-2 cursor-pointer">
+            <span class="material-icons">more_horiz</span>
+          </div> -->
+      </div>
+      <div class="p-4">
+        <!-- <div class="flex items-center space-x-2 mb-2">
+            <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-green-500 font-bold">
+              84%
+            </div>
+          </div> -->
+        <h3 class="text-lg font-semibold"><a [routerLink]="['/movies', movie.id]"  class="hover:text-blue-600" >{{ movie.title}}{{movie.name}}</a></h3>
+        <p class="text-gray-600 text-sm">{{ movie.release_date }}{{movie.first_air_date}}</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+
+
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+#FullScreen {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .movie-title-3 {
+    bottom: 10%;
+    left: 5%;
+    color: white;
+  }
+  
