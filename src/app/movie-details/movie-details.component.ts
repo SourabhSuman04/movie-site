@@ -4,9 +4,10 @@ import { MoviesService } from '../movies.service';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-movie-details',
-  templateUrl: './movie-details.component.html',
-  styleUrl: './movie-details.component.css'
+    selector: 'app-movie-details',
+    templateUrl: './movie-details.component.html',
+    styleUrl: './movie-details.component.css',
+    standalone: false
 })
 export class MovieDetailsComponent {
   movies: any;

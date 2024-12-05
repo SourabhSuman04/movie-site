@@ -3,9 +3,10 @@ import { MoviesService } from '../movies.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-searchpage',
-  templateUrl: './searchpage.component.html',
-  styleUrl: './searchpage.component.css'
+    selector: 'app-searchpage',
+    templateUrl: './searchpage.component.html',
+    styleUrl: './searchpage.component.css',
+    standalone: false
 })
 export class SearchpageComponent {
   query: string = '';

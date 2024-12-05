@@ -3,9 +3,10 @@ import { MoviesService } from '../movies.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-pages',
-  templateUrl: './pages.component.html',
-  styleUrl: './pages.component.css'
+    selector: 'app-pages',
+    templateUrl: './pages.component.html',
+    styleUrl: './pages.component.css',
+    standalone: false
 })
 export class PagesComponent {
   movies: any[] = [];

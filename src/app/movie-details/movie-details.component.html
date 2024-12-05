@@ -129,9 +129,9 @@
       class="mr-8 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 bg-white shadow rounded-s-xl ">
 
       <div class="relative w-52 rounded-s-xl"  >
-        <a [routerLink]="['/movie', movie.id]" >
+        <!-- <a [routerLink]="['/movie', movie.id]" > -->
           <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.profile_path" [alt]="movie.character" class="w-screen-sm h-screen-sm">
-        </a>
+        <!-- </a>/ -->
         <!-- <div class="absolute top-2 right-2 bg-gray-800 text-white rounded-full p-2 cursor-pointer">
             <span class="material-icons">more_horiz</span>
           </div> -->
@@ -142,7 +142,8 @@
               84%
             </div>
           </div> -->
-        <h3 class="text-lg font-semibold"><a [routerLink]="['/movie', movie.id]"  class="hover:text-blue-600" >{{ movie.title}}{{movie.name}}</a></h3>
+        <h3 class="text-lg font-semibold"><a class="hover:text-blue-600" >{{ movie.title}}{{movie.name}}{{movie.original_name
+}}</a></h3>
         <p class="text-gray-600 text-sm">{{ movie.character }}{{movie.first_air_date}}</p>
       </div>
     </div>

@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-popular',
-  templateUrl: './popular.component.html',
-  styleUrl: './popular.component.css'
+    selector: 'app-popular',
+    templateUrl: './popular.component.html',
+    styleUrl: './popular.component.css',
+    standalone: false
 })
 export class PopularComponent {
 

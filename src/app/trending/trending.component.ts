@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { MoviesService } from '../movies.service';
 
 @Component({
-  selector: 'app-trending',
-  templateUrl: './trending.component.html',
-  styleUrl: './trending.component.css'
+    selector: 'app-trending',
+    templateUrl: './trending.component.html',
+    styleUrl: './trending.component.css',
+    standalone: false
 })
 export class TrendingComponent {
   movies: any[] = [];

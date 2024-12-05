@@ -5,9 +5,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MoviesService } from '../movies.service';
 
 @Component({
-  selector: 'app-tv-details',
-  templateUrl: './tv-details.component.html',
-  styleUrl: './tv-details.component.css'
+    selector: 'app-tv-details',
+    templateUrl: './tv-details.component.html',
+    styleUrl: './tv-details.component.css',
+    standalone: false
 })
 export class TvDetailsComponent {
 

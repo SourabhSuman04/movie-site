@@ -3,9 +3,10 @@ import { MoviesService } from '../movies.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-traler',
-  templateUrl: './traler.component.html',
-  styleUrl: './traler.component.css'
+    selector: 'app-traler',
+    templateUrl: './traler.component.html',
+    styleUrl: './traler.component.css',
+    standalone: false
 })
 export class TralerComponent {
   movies: any[] = [];
